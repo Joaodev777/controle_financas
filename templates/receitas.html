@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transações do Tipo Receita</title>
+    
+    <!-- Adicione o link para o Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="container mt-5">
+
+    <h1 class="mb-4">Transações do Tipo Receita</h1>
+
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Observação</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Referente</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for receita in receitas %}
+                <tr>
+                    <td>{{ receita[0] }}</td>
+                    <td>{{ receita[1] }}</td>
+                    <td>{{ receita[2] }}</td>
+                    <td>{{ receita[5] }}</td>
+                    <td>{{ receita[4] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <p class="mt-4">Valor Total das Receitas: {{ valor_total }}</p>
+
+    <!-- Adicione o link para o Bootstrap JS e jQuery (opcional, dependendo do uso) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

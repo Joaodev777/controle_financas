@@ -1,0 +1,18 @@
+<!-- confirmar_exclusao.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Exclusão</title>
+</head>
+<body>
+    <h1>Confirmar Exclusão</h1>
+    <p>Tem certeza de que deseja excluir esta transação?</p>
+    <form method="POST" action="/excluir/{{ id }}">
+        <button type="submit">Sim, Excluir</button>
+        <a href="/">Cancelar</a>
+    </form>
+</body>
+</html>
